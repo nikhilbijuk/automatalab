@@ -1,8 +1,16 @@
 # AutomataLab — Interactive Regex to DFA Converter
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://automatalab.netlify.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+> **Live Website:** [automatalab.netlify.app](https://automatalab.netlify.app/)
+
 A working, browser-based Theory of Computation team mini-project. **No framework, backend, cloud service, npm install, or internet access required.** The actual automata algorithms are implemented from scratch in JavaScript ES modules.
 
-## Run
+## 🌐 Live Demo & Run
+
+- **Online**: Visit [automatalab.netlify.app](https://automatalab.netlify.app/)
+- **Locally**:
 
 1. Extract the ZIP.
 2. In the `AutomataLab` folder, run `python -m http.server 8000` (or `python3 -m http.server 8000`).
