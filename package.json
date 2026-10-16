@@ -1,0 +1,1 @@
+{"name":"automatalab-toc","version":"1.0.0","private":true,"type":"module","scripts":{"start":"python -m http.server 8000","test":"node --test tests/*.test.js"},"description":"Offline-friendly interactive Regex → ε-NFA → DFA visualizer"}
