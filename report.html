@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AutomataLab — Complete TOC Project Report & Viva Guide</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+  @media print {
+    .page-break { page-break-before: always; }
+    body { font-size: 11pt; }
+    h1, h2, h3 { page-break-after: avoid; }
+    table, pre, blockquote { page-break-inside: avoid; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    background: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+    padding: 40px 20px;
+  }
+  .cover-header {
+    font-size: 13pt;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #475569;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  .cover h1 {
+    font-size: 28pt;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 10px 0 20px;
+    line-height: 1.2;
+  }
+  .cover .subtitle {
+    font-size: 15pt;
+    color: #0284c7;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #e0f2fe;
+    color: #0369a1;
+    border-radius: 999px;
+    font-size: 10pt;
+    font-weight: 700;
+    margin-bottom: 40px;
+    border: 1px solid #bae6fd;
+  }
+  .meta-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px 30px;
+    text-align: left;
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto;
+  }
+  .meta-box p {
+    margin: 6px 0;
+    font-size: 11pt;
+  }
+  .meta-box strong {
+    color: #0f172a;
+    display: inline-block;
+    width: 140px;
+  }
+  h1.section-title {
+    font-size: 20pt;
+    font-weight: 800;
+    color: #0f172a;
+    border-bottom: 3px solid #0284c7;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 14pt;
+    font-weight: 700;
+    color: #1e293b;
+    border-left: 4px solid #0284c7;
+    padding-left: 10px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+  }
+  h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: #334155;
+    margin-top: 18px;
+    margin-bottom: 8px;
+  }
+  p, li {
+    font-size: 10.5pt;
+    color: #334155;
+  }
+  ul, ol {
+    margin: 8px 0;
+    padding-left: 24px;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+  code {
+    font-family: "Consolas", "Courier New", monospace;
+    background: #f1f5f9;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-size: 9.5pt;
+    color: #0f172a;
+  }
+  pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 14px;
+    border-radius: 6px;
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 9.5pt;
+    overflow-x: auto;
+    line-height: 1.45;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 10pt;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 10px;
+    text-align: left;
+  }
+  th {
+    background: #f1f5f9;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  tr:nth-child(even) {
+    background: #f8fafc;
+  }
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 12px 16px;
+    margin: 12px 0;
+  }
+  .qna-box {
+    background: #ffffff;
+    border-left: 4px solid #0284c7;
+    border-top: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin: 14px 0;
+  }
+  .qna-q {
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-size: 10.5pt;
+  }
+  .qna-a {
+    color: #334155;
+    font-size: 10pt;
+  }
+  .tag {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 8.5pt;
+    font-weight: 700;
+  }
+  .tag-green { background: #dcfce7; color: #15803d; }
+  .tag-blue { background: #e0f2fe; color: #0369a1; }
+  .tag-amber { background: #fef3c7; color: #b45309; }
+</style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="cover">
+  <div class="cover-header">Theory of Computation (TOC) — Course Project</div>
+  <h1>AutomataLab</h1>
+  <div class="subtitle">Interactive Regular Expression to DFA Converter & Visualizer</div>
+  <div class="badge">Topic 5: Regular Expression to DFA Converter with GUI</div>
+
+  <div class="meta-box">
+    <p><strong>Subject:</strong> Theory of Computation (CST 301)</p>
+    <p><strong>Department:</strong> Computer Science & Engineering</p>
+    <p><strong>Project Type:</strong> 4-Member Team Project</p>
+    <p><strong>Live Demo:</strong> <a href="https://automatalab.netlify.app/">https://automatalab.netlify.app/</a></p>
+    <p><strong>Source Code:</strong> <a href="https://github.com/nikhilbijuk/automatalab">github.com/nikhilbijuk/automatalab</a></p>
+    <p><strong>Architecture:</strong> Vanilla JavaScript (ES Modules), Zero Dependencies</p>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- TABLE OF CONTENTS -->
+<h1 class="section-title">Table of Contents</h1>
+<ol style="font-size: 11pt; line-height: 1.8;">
+  <li><strong>PART 1: PROJECT REPORT & SYNOPSIS</strong>
+    <ul>
+      <li>1.1 Abstract & Project Overview</li>
+      <li>1.2 Problem Statement & Objectives</li>
+      <li>1.3 Mathematical Formulations (5-tuple representation)</li>
+      <li>1.4 Core Algorithms & Pseudocode
+        <ul>
+          <li>Shunting-Yard Infix to Postfix with Explicit Concatenation</li>
+          <li>Thompson's Construction (Postfix to &epsilon;-NFA)</li>
+          <li>Subset Construction with &epsilon;-Closure (&epsilon;-NFA to DFA)</li>
+          <li>DFA String Acceptance Simulator</li>
+        </ul>
+      </li>
+      <li>1.5 System Architecture & Flowchart</li>
+      <li>1.6 Verification & Test Cases (Automated Suite)</li>
+    </ul>
+  </li>
+  <li><strong>PART 2: VIVA VOCE & PRESENTATION DEFENCE GUIDE</strong>
+    <ul>
+      <li>2.1 Foundational Automata Theory Questions (Q1 – Q6)</li>
+      <li>2.2 Thompson's Construction Deep Dive (Q7 – Q12)</li>
+      <li>2.3 Subset Construction & State Explosion (Q13 – Q18)</li>
+      <li>2.4 String Simulation & Dead State Handling (Q19 – Q22)</li>
+      <li>2.5 Examiner Traps & Advanced Edge Cases (Q23 – Q28)</li>
+    </ul>
+  </li>
+  <li><strong>PART 3: ADVANCED FEATURES, UI ENHANCEMENTS & TEAM ROLES</strong>
+    <ul>
+      <li>3.1 DFA Minimization (Hopcroft's Algorithm Formulation)</li>
+      <li>3.2 Graph Rendering Architecture (SVG / Canvas Layout)</li>
+      <li>3.3 Deployment Pipeline (GitHub & Netlify CI/CD)</li>
+      <li>3.4 4-Member Work Division & Viva Role Allocation</li>
+    </ul>
+  </li>
+</ol>
+
+<div class="page-break"></div>
+
+<!-- PART 1: REPORT -->
+<h1 class="section-title">Part 1: Project Report & Synopsis</h1>
+
+<h2>1.1 Abstract</h2>
+<p>
+<strong>AutomataLab</strong> is an interactive educational and analytical software tool designed to bridge theoretical formal language concepts with visual, algorithmic execution. Given an arbitrary regular expression over alphanumeric alphabets with union (<code>|</code>), concatenation, Kleene star (<code>*</code>), plus (<code>+</code>), and optional (<code>?</code>) operators, the system validates syntax, converts the expression to postfix notation, constructs an equivalent &epsilon;-NFA via Thompson's Construction, and transforms the non-deterministic machine into a Deterministic Finite Automaton (DFA) using Subset Construction and &epsilon;-closures. The platform features an interactive GUI that allows step-by-step state inspection, transition table rendering, and step-by-step string acceptance simulation. It runs entirely client-side with zero external frameworks or backend dependencies.
+</p>
+
+<h2>1.2 Problem Statement & Objectives</h2>
+<p>
+In academic study of Theory of Computation (TOC), students often find manual translation between regular expressions, non-deterministic finite automata, and deterministic finite automata tedious and error-prone. Standard tools either use opaque black-box regex libraries (which hide theoretical automata) or generate static images without explaining how intermediate states arise.
+</p>
+<p><strong>Core Objectives:</strong></p>
+<ul>
+  <li>Implement Thompson's Algorithm from scratch to construct inductive &epsilon;-NFA fragments.</li>
+  <li>Implement Subset Construction and &epsilon;-closure to determinize the NFA into a DFA.</li>
+  <li>Construct and display a complete DFA transition table including dead/trap states.</li>
+  <li>Provide an interactive string tester that visually traces transitions and outputs <code>Accepted</code> or <code>Rejected</code>.</li>
+  <li>Ensure 100% offline portability and instant cloud deployment.</li>
+</ul>
+
+<h2>1.3 Mathematical Formulations</h2>
+<p>Formally, both the generated NFA and DFA are 5-tuples:</p>
+<div class="card">
+  <strong>Automaton Definition:</strong> <code>M = (Q, &Sigma;, &delta;, q<sub>0</sub>, F)</code>
+  <ul>
+    <li><code>Q</code>: Finite set of states.</li>
+    <li><code>&Sigma;</code>: Finite set of input symbols (the alphabet).</li>
+    <li><code>&delta;</code>: Transition function:
+      <ul>
+        <li>For &epsilon;-NFA: <code>&delta;: Q &times; (&Sigma; &cup; {&epsilon;}) &rarr; P(Q)</code></li>
+        <li>For DFA: <code>&delta;: Q &times; &Sigma; &rarr; Q</code></li>
+      </ul>
+    </li>
+    <li><code>q<sub>0</sub> &isin; Q</code>: Initial / start state.</li>
+    <li><code>F &sube; Q</code>: Set of final / accepting states.</li>
+  </ul>
+</div>
+
+<h2>1.4 Core Algorithms & Pseudocode</h2>
+
+<h3>A. Infix to Postfix with Explicit Concatenation</h3>
+<p>
+Standard regular expressions use implicit concatenation (e.g., <code>ab</code> means <code>a &middot; b</code>). Before executing the Shunting-Yard algorithm, an explicit concatenation operator (<code>&middot;</code>) is inserted between adjacent symbols where appropriate.
+</p>
+<pre>
+Algorithm: InsertExplicitConcatenation(regex):
+  output = ""
+  for i from 0 to length(regex) - 1:
+    c1 = regex[i]
+    output.append(c1)
+    if i + 1 < length(regex):
+      c2 = regex[i + 1]
+      if (isAlphanumeric(c1) or c1 in {')', '*', '+', '?'}) and
+         (isAlphanumeric(c2) or c2 == '('):
+        output.append('&middot;')
+  return output
+</pre>
+
+<h3>B. Thompson's Construction (&epsilon;-NFA)</h3>
+<p>
+Processes the postfix regex linearly using a stack of NFA fragments. Each fragment has a single start state and a single accept state.
+</p>
+<ul>
+  <li><strong>Base Case (Symbol <code>a</code>):</strong> Creates state <code>s<sub>0</sub></code> and <code>s<sub>1</sub></code> with transition <code>s<sub>0</sub> &rarr;<sup>a</sup> s<sub>1</sub></code>.</li>
+  <li><strong>Base Case (&epsilon;):</strong> Creates transition <code>s<sub>0</sub> &rarr;<sup>&epsilon;</sup> s<sub>1</sub></code>.</li>
+  <li><strong>Union (<code>A | B</code>):</strong> New start state with &epsilon;-transitions to <code>A.start</code> and <code>B.start</code>; <code>A.accept</code> and <code>B.accept</code> have &epsilon;-transitions to a new final state.</li>
+  <li><strong>Concatenation (<code>A &middot; B</code>):</strong> Merges or connects <code>A.accept &rarr;<sup>&epsilon;</sup> B.start</code>.</li>
+  <li><strong>Kleene Star (<code>A*</code>):</strong> Adds &epsilon;-loops from <code>A.accept &rarr; A.start</code> and bypass from new start to new final state.</li>
+</ul>
+
+<h3>C. Subset Construction & &epsilon;-Closure</h3>
+<p>
+Converts the &epsilon;-NFA into an equivalent DFA where each DFA state corresponds to a subset of NFA states.
+</p>
+<pre>
+Algorithm: SubsetConstruction(NFA):
+  DFA_States = []
+  q0_set = epsilon_closure({NFA.start})
+  add q0_set to DFA_States as unmarked
+  
+  while exists unmarked state T in DFA_States:
+    mark T
+    for each symbol a in Alphabet:
+      U = epsilon_closure(move(T, a))
+      if U is not empty:
+        if U not in DFA_States:
+          add U to DFA_States as unmarked
+        DFA_Transitions[T, a] = U
+      else:
+        DFA_Transitions[T, a] = DEAD_STATE
+  
+  Mark any DFA state containing NFA.accept as an accepting state.
+</pre>
+
+<h2>1.5 Verification & Automated Test Suite</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Regex</th>
+      <th>Test Input</th>
+      <th>Expected</th>
+      <th>Outcome</th>
+      <th>Theoretical Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>(a|b)*abb</code></td>
+      <td><code>aabb</code></td>
+      <td><span class="tag tag-green">Accepted</span></td>
+      <td>PASS</td>
+      <td>Tests union, Kleene star, and trailing pattern</td>
+    </tr>
+    <tr>
+      <td><code>(a|b)*abb</code></td>
+      <td><code>abab</code></td>
+      <td><span class="tag tag-amber">Rejected</span></td>
+      <td>PASS</td>
+      <td>Tests rejecting invalid suffix</td>
+    </tr>
+    <tr>
+      <td><code>a*</code></td>
+      <td><code>""</code> (empty string)</td>
+      <td><span class="tag tag-green">Accepted</span></td>
+      <td>PASS</td>
+      <td>Verifies &epsilon;-acceptance of Kleene star</td>
+    </tr>
+    <tr>
+      <td><code>a+b?</code></td>
+      <td><code>a</code></td>
+      <td><span class="tag tag-green">Accepted</span></td>
+      <td>PASS</td>
+      <td>Verifies plus (1+) and optional (0) operators</td>
+    </tr>
+    <tr>
+      <td><code>(a|b)*</code></td>
+      <td><code>baab</code></td>
+      <td><span class="tag tag-green">Accepted</span></td>
+      <td>PASS</td>
+      <td>Universal language over {a,b}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- PART 2: VIVA GUIDE -->
+<h1 class="section-title">Part 2: Viva Voce & Presentation Defence Guide</h1>
+
+<h2>2.1 Foundational Automata Theory Questions</h2>
+
+<div class="qna-box">
+  <div class="qna-q">Q1. What is the fundamental difference between an NFA and a DFA?</div>
+  <div class="qna-a">
+    In a DFA, for every state and every alphabet symbol, there is <strong>exactly one</strong> deterministic next state. No &epsilon;-transitions are permitted. In an NFA, for a given state and symbol, there can be <strong>zero, one, or multiple</strong> transitions, as well as &epsilon; (spontaneous) transitions without consuming input.
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q2. Are NFAs more powerful than DFAs in terms of language recognition?</div>
+  <div class="qna-a">
+    <strong>No.</strong> Both NFAs and DFAs recognize exactly the same class of languages: <em>Regular Languages</em>. By the Subset Construction theorem (Rabin & Scott), every NFA can be converted into an equivalent DFA.
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q3. What is an &epsilon;-closure?</div>
+  <div class="qna-a">
+    The &epsilon;-closure of a state <code>s</code> (denoted <code>&epsilon;-closure(s)</code>) is the set of all states reachable from <code>s</code> by taking zero or more &epsilon;-transitions without consuming any input character.
+  </div>
+</div>
+
+<h2>2.2 Thompson's Construction Deep Dive</h2>
+
+<div class="qna-box">
+  <div class="qna-q">Q4. Why does Thompson's construction introduce so many &epsilon;-transitions?</div>
+  <div class="qna-a">
+    Thompson's algorithm is strictly compositional and inductive. It builds complex automata by plugging smaller sub-automata into fixed templates (union, concatenation, star). The &epsilon;-transitions guarantee that fragments can be joined without state conflicts or modifying the internal transition logic of sub-expressions.
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q5. For a regular expression of length <code>n</code>, what is the upper bound on the number of states in a Thompson &epsilon;-NFA?</div>
+  <div class="qna-a">
+    The number of states is linearly bounded: at most <code>2n</code> states, and at most <code>4n</code> transitions. This linear guarantee makes Thompson's algorithm computationally optimal for NFA creation.
+  </div>
+</div>
+
+<h2>2.3 Subset Construction & State Explosion</h2>
+
+<div class="qna-box">
+  <div class="qna-q">Q6. What is the theoretical maximum number of states in a DFA converted from an NFA with <code>N</code> states?</div>
+  <div class="qna-a">
+    The maximum number is <strong>2<sup>N</sup></strong> (the power set of NFA states). This is known as <em>state explosion</em>. However, in practical regular expressions, the number of reachable states is typically close to <code>N</code>.
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q7. How do you determine whether a DFA state is an accepting (final) state?</div>
+  <div class="qna-a">
+    A DFA state <code>S = {s<sub>1</sub>, s<sub>2</sub>, ..., s<sub>k</sub>}</code> is an accepting state if and only if <strong>at least one</strong> NFA state <code>s<sub>i</sub> &isin; S</code> is an accepting state of the original &epsilon;-NFA.
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q8. What is a Dead / Trap state in a DFA?</div>
+  <div class="qna-a">
+    A dead state (often represented as &empty;) is a non-accepting state from which no accepting state can ever be reached. Once entered, all transitions loop back to itself. In our transition table, transitions on undefined inputs lead to this trap state.
+  </div>
+</div>
+
+<h2>2.4 Examiner Traps & Viva Defense Tips</h2>
+
+<div class="qna-box">
+  <div class="qna-q">Q9. Examiner: "Is the DFA generated by your project minimal?"</div>
+  <div class="qna-a">
+    <strong>Model Answer:</strong> <em>"No, sir/ma'am. The DFA generated by Subset Construction is equivalent to the regular expression, but not necessarily minimal. Minimization requires a subsequent partitioning algorithm, such as Hopcroft's or the Table-Filling (Myhill-Nerode) algorithm. In our architecture, the subset-construction DFA remains directly traceable to NFA state sets."</em>
+  </div>
+</div>
+
+<div class="qna-box">
+  <div class="qna-q">Q10. Examiner: "Did you use a built-in regex library to test strings?"</div>
+  <div class="qna-a">
+    <strong>Model Answer:</strong> <em>"Absolutely not. All tokenization, Shunting-Yard postfix conversion, Thompson graph construction, &epsilon;-closures, and DFA simulation are implemented strictly from scratch in <code>src/automata.js</code> using fundamental discrete math structures."</em>
+  </div>
+</div>
+
+<div class="page-break"></div>
+
+<!-- PART 3: ADVANCED FEATURES & TEAM ROLES -->
+<h1 class="section-title">Part 3: Advanced Features, UI & Team Roles</h1>
+
+<h2>3.1 DFA Minimization (Hopcroft's Algorithm Formulation)</h2>
+<p>
+To reduce the DFA to its minimum number of states, states are partitioned into equivalence classes:
+</p>
+<ol>
+  <li><strong>Initial Partition:</strong> <code>P = { F, Q \ F }</code> (Accepting states vs Non-accepting states).</li>
+  <li><strong>Refinement:</strong> For each set <code>B &isin; P</code> and each alphabet symbol <code>a &isin; &Sigma;</code>, split <code>B</code> into <code>B<sub>1</sub></code> and <code>B<sub>2</sub></code> if states in <code>B</code> transition into different partitions on symbol <code>a</code>.</li>
+  <li><strong>Termination:</strong> Repeat until no partition can be further split. Merge states within the same group into a single minimal state.</li>
+</ol>
+
+<h2>3.2 Software Design & UI Architecture</h2>
+<ul>
+  <li><strong>Zero-Dependency Design:</strong> The application uses native JavaScript ES Modules, semantic HTML5, and CSS Grid/Flexbox without bulky node bundles or build steps.</li>
+  <li><strong>Graph Visualization:</strong> Nodes and transitions are laid out on responsive visual canvases with designated start arrows (<code>&rarr;</code>) and double-bordered final states.</li>
+  <li><strong>Real-Time Simulation:</strong> As each character of a test string is processed, the active DFA node pulses green, while the trace log records the exact state trajectory (e.g., <code>q0 &rarr;[a]&rarr; q1 &rarr;[b]&rarr; q2 (Accepted)</code>).</li>
+</ul>
+
+<h2>3.3 Live Production & Deployment</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Platform</th>
+      <th>URL</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Netlify (Live Site)</strong></td>
+      <td><a href="https://automatalab.netlify.app/">https://automatalab.netlify.app/</a></td>
+      <td>Instant public demonstration on any phone/laptop during viva</td>
+    </tr>
+    <tr>
+      <td><strong>GitHub (Source)</strong></td>
+      <td><a href="https://github.com/nikhilbijuk/automatalab">github.com/nikhilbijuk/automatalab</a></td>
+      <td>Repository, version control history, automated tests</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3.4 Suggested 4-Member Work Division</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Team Member</th>
+      <th>Assigned Module</th>
+      <th>Key Deliverables & Viva Talking Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Member 1</strong><br>(Lead / Parser)</td>
+      <td>Regex Parsing & Tokenizer</td>
+      <td>Validation, handling operator precedence, inserting explicit concatenation, Shunting-Yard infix-to-postfix conversion.</td>
+    </tr>
+    <tr>
+      <td><strong>Member 2</strong><br>(Automata Core)</td>
+      <td>Thompson's Construction</td>
+      <td>Converting postfix expressions into &epsilon;-NFA fragments, managing state IDs, handling union, star, plus, and optional operators.</td>
+    </tr>
+    <tr>
+      <td><strong>Member 3</strong><br>(DFA Engine)</td>
+      <td>Subset Construction & &epsilon;-Closure</td>
+      <td>Computing &epsilon;-closure sets, mapping NFA state sets to DFA states, detecting accepting states, generating the DFA transition table.</td>
+    </tr>
+    <tr>
+      <td><strong>Member 4</strong><br>(UI & Simulator)</td>
+      <td>Frontend & String Simulation</td>
+      <td>Graph rendering, step-by-step UI controls, string acceptance trace animation, test suite integration.</td>
+    </tr>
+  </tbody>
+</table>
+
+<div style="margin-top: 40px; text-align: center; color: #64748b; font-size: 9.5pt; border-top: 1px solid #e2e8f0; padding-top: 15px;">
+  AutomataLab — Theory of Computation Team Project · Generated for Academic Submission & Viva Voce
+</div>
+
+</body>
+</html>
